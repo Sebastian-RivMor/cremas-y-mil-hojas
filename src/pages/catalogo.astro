@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Productos from '../components/Productos.astro';
+import Toogle from '../components/Toogle-flot.astro';
+import Carrito from '../components/Carrito-flot.astro';
+import Footer from '../components/Footer.astro';
+
+import "../styles/global.css";
+---
+
+<Layout>
+    <Navbar />
+    
+    <Productos />
+
+    <!--Carrito interno -->
+    <Toogle />
+    <!--Carrito externo -->
+    <Carrito />
+
+
+
+    <Footer />
+</Layout>

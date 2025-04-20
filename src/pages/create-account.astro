@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+---
+
+<Layout>
+    <div class="font-sans">
+        <div class="relative min-h-screen flex flex-col sm:justify-center items-center">
+            <div class="relative sm:max-w-sm w-full">
+                <div class="relative w-full rounded-3xl px-6 py-4 bg-gray-100 shadow-md">
+                    <label class="block mt-3 text-sm text-gray-700 text-center font-semibold">
+                        Registrate
+                    </label>
+
+                    <form id="registerForm" class="mt-10">
+                        <input type="text" name="nombre" placeholder="Nombre" required class="mt-1 block w-full bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
+                        
+                        <input type="text" name="apellido" placeholder="Apellido" required class="mt-7 block w-full bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
+                        
+                        <input type="text" name="telefono" placeholder="Telefono"  maxlength="9" required class="mt-7 block w-full bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
+                        
+                        <input type="email" name="email" placeholder="Correo electrónico" required class="mt-7 block w-full bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
+                        
+                        <input type="password" name="password" placeholder="Contraseña" required class="mt-7 block w-full bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
+                        
+                        <button type="submit" class="mt-7 bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105">
+                            Registrar
+                        </button>
+                    </form>
+
+                    <div class="mt-7 flex justify-center items-center">
+                        <label class="mr-2">¿Ya tienes una cuenta?</label>
+                        <a href="/login" class="text-blue-500 transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105">
+                            Iniciar sesión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const jsonData = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch("http://localhost/cremas_y_mil_hojas_Backend/public/register.php", {
+
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(jsonData)
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    alert("Registro exitoso");
+                    window.location.href = "/login";
+                } else {
+                    alert("Error: " + data.error);
+                }
+            } catch (error) {
+                alert("Error en la conexión con el servidor");
+            }
+        });
+    </script>
+</Layout>

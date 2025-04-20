@@ -1,0 +1,26 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Nos from '../components/Nos.astro';
+import Toogle from '../components/Toogle-flot.astro';
+import Carrito from '../components/Carrito-flot.astro';
+// import Ocasion from '../components/Ocasion.astro';
+
+import "../styles/global.css";
+---
+
+<Layout>
+    <Navbar />
+
+    <Nos />
+
+    <!--Carrito interno -->
+    <Toogle />
+    <!--Carrito externo -->
+    <Carrito />
+
+    <!-- <Ocasion /> -->
+    <Footer />
+
+</Layout>

@@ -1,0 +1,514 @@
+[
+    {
+        "slug": "ALFAJOR",
+        "title": "ALFAJOR",
+        "img": "/alfajor.png",
+        "price": 4.00,
+        "categoria": "DULCES",
+        "costo": "BAJO"
+    },
+    {
+        "slug": "CARROT CAKE",
+        "title": "CARROT CAKE",
+        "img": "/carrot_cake.png",
+        "price": 11.00,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "CROISSANT",
+        "title": "CROISSANT",
+        "img": "/pan_croissant.png",
+        "price": 2.80,
+        "categoria": "BOLLERÍA"
+    },
+    {
+        "slug": "EMPANADA DE LOMO",
+        "title": "EMPANADA DE LOMO",
+        "img": "/empanada_lomo.png",
+        "price": 7.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "EMPANADAS",
+        "title": "EMPANADAS",
+        "img": "/empanada.png",
+        "price": 7.00,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "CHIFÓN DE NARANJA",
+        "title": "CHIFÓN DE NARANJA",
+        "img": "/keke_chifonnaranja.png",
+        "price": 22.10,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "CHOCO KEKE",
+        "title": "CHOCO KEKE",
+        "img": "/keke_choco.png",
+        "price": 13.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "KEKE GLASEADO",
+        "title": "KEKE GLASEADO",
+        "img": "/keke_glaseado.png",
+        "price": 14.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "KEKE MARMOLEADO",
+        "title": "KEKE MARMOLEADO",
+        "img": "/keke_marmoleado.png",
+        "price": 12.00,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "KEKE DE NARANJA",
+        "title": "KEKE DE NARANJA",
+        "img": "/keke_naranja.png",
+        "price": 12.20,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "KEKE DE VAINILLA",
+        "title": "KEKE DE VAINILLA",
+        "img": "/keke_vainilla.png",
+        "price": 12.60,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "KEKE VAINILLA MANJAR",
+        "title": "KEKE VAINILLA MANJAR",
+        "img": "/keke_vainillamanjar.png",
+        "price": 13.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "MIL HOJAS",
+        "title": "MIL HOJAS",
+        "img": "/milhojas.png",
+        "price": 6.00,
+        "categoria": "BOLLERÍA"
+    },
+    {
+        "slug": "PAN ÁRABE BLANCO",
+        "title": "PAN ÁRABE BLANCO",
+        "img": "/pan_arabe.png",
+        "price": 2.50,
+        "categoria": "PAN SALUDABLE"
+    },
+    {
+        "slug": "ÁRABE INTEGRAL",
+        "title": "ÁRABE INTEGRAL",
+        "img": "/pan_arabeintegral.png",
+        "price": 2.50,
+        "categoria": "PAN SALUDABLE"
+    },
+    {
+        "slug": "PAN CARIOCA",
+        "title": "PAN CARIOCA",
+        "img": "/pan_carioca.png",
+        "price": 2.50,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "PAN BAGUETTE",
+        "title": "PAN BAGUETTE",
+        "img": "/pan_baguette.png",
+        "price": 2.20,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "BATARD MULTIGRANO",
+        "title": "BATARD MULTIGRANO",
+        "img": "/pan_batard.png",
+        "price": 9.90,
+        "categoria": "PAN SALUDABLE"
+    },
+    {
+        "slug": "PAN BRIOCHE",
+        "title": "PAN BRIOCHE",
+        "img": "/pan_brioche.png",
+        "price": 2.90,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "PAN CACHITO",
+        "title": "PAN CACHITO",
+        "img": "/pan_cachito.png",
+        "price": 2.80,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "PAN DE CENTENO",
+        "title": "PAN DE CENTENO",
+        "img": "/pan_centeno.png",
+        "price": 5.90,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "PAN CHAPLA",
+        "title": "PAN CHAPLA",
+        "img": "/pan_chapla.png",
+        "price": 4.50,
+        "categoria": "PAN SALUDABLE"
+    },
+    {
+        "slug": "CHOCOKARAMANDUKA",
+        "title": "CHOCOKARAMANDUKA",
+        "img": "/pan_chocokaramaduka.png",
+        "price": 4.30,
+        "categoria": "BOLLERÍA"
+    },
+    {
+        "slug": "PAN CIABATTA",
+        "title": "PAN CIABATTA",
+        "img": "/pan_ciabatta.png",
+        "price": 2.80,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "PAN COLIZA",
+        "title": "PAN COLIZA",
+        "img": "/pan_coliza.png",
+        "price": 2.20,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "PAN FRANCÉS",
+        "title": "PAN FRANCÉS",
+        "img": "/pan_frances.png",
+        "price": 2.80,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "HOGAZA BLANCA",
+        "title": "HOGAZA BLANCA",
+        "img": "/pan_hogazablanca.png",
+        "price": 6.90,
+        "categoria": "PAN SALUDABLE"
+    },
+    {
+        "slug": "HOGAZA MUESLI",
+        "title": "HOGAZA MUESLI",
+        "img": "/pan_hogazamuesli.png",
+        "price": 9.90,
+        "categoria": "PAN SALUDABLE"
+    },
+    {
+        "slug": "HOGAZA MULTICEREAL",
+        "title": "HOGAZA MULTICEREAL",
+        "img": "/pan_hogazamulticereal.png",
+        "price": 9.90,
+        "categoria": "PAN SALUDABLE"
+    },
+    {
+        "slug": "PAN INTEGRAL",
+        "title": "PAN INTEGRAL",
+        "img": "/pan_integral.png",
+        "price": 2.80,
+        "categoria": "PAN SALUDABLE"
+    },
+    {
+        "slug": "KARAMANDUKA",
+        "title": "KARAMANDUKA",
+        "img": "/pan_karamaduka.png",
+        "price": 4.50,
+        "categoria": "BOLLERÍA"
+    },
+    {
+        "slug": "MINI CACHITO",
+        "title": "MINI CACHITO",
+        "img": "/pan_minicachito.png",
+        "price": 8.60,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "MINI CROISSANT",
+        "title": "MINI CROISSANT",
+        "img": "/pan_minicroissant.png",
+        "price": 2.10,
+        "categoria": "BOLLERÍA"
+    },
+    {
+        "slug": "PAN MULTICEREAL",
+        "title": "PAN MULTICEREAL",
+        "img": "/pan_multicereal.png",
+        "price": 5.90,
+        "categoria": "PAN SALUDABLE"
+    },
+    {
+        "slug": "PETIT PAN",
+        "title": "PETIT PAN",
+        "img": "/pan_petit.png",
+        "price": 7.90,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "PAN PIZZA",
+        "title": "PAN PIZZA",
+        "img": "/pan_pizza.png",
+        "price": 4.40,
+        "categoria": "PAN ARTESANAL"
+    },
+    {
+        "slug": "PAN YEMA",
+        "title": "PAN YEMA",
+        "img": "/pan_yema.png",
+        "price": 2.80,
+        "categoria": "PAN SALUDABLE"
+    },
+    {
+        "slug": "PIE DE FRUTAS",
+        "title": "PIE DE FRUTAS",
+        "img": "/pie_frutas.png",
+        "price": 48.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "PIE DE MANZANA",
+        "title": "PIE DE MANZANA",
+        "img": "/pie_manzana.png",
+        "price": 25.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "PIONONO CACAO",
+        "title": "PIONONO CACAO",
+        "img": "/alfajor.png",
+        "price": 110.0,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "PIONONO CLÁSICO",
+        "title": "PIONONO CLÁSICO",
+        "img": "/pionono_clasico.png",
+        "price": 19.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "PIONONO DE FRESA",
+        "title": "PIONONO DE FRESA",
+        "img": "/pionono_fresa.png",
+        "price": 20.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "PIONONO MANJAR",
+        "title": "PIONONO MANJAR",
+        "img": "/pionono_manjar.png",
+        "price": 37.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "PUDDING DINEAPPLE",
+        "title": "PUDDING DINEAPPLE",
+        "img": "/pudding_pineapple.png",
+        "price": 13.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "PASTEL RED VELVET",
+        "title": "PASTEL RED VELVET",
+        "img": "/red_velvet.png",
+        "price": 8.00,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "ROSQUITAS",
+        "title": "ROSQUITAS",
+        "img": "/rosquitas.png",
+        "price": 2.50,
+        "categoria": "BOLLERÍA"
+    },
+    {
+        "slug": "TARTA ÁRANDANOS",
+        "title": "TARTA ÁRANDANOS",
+        "img": "/tarta_arandanos.png",
+        "price": 8.50,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "TARTA DE MANZANA",
+        "title": "TARTA DE MANZANA",
+        "img": "/tarta_manzana.png",
+        "price": 8.00,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "PASTEL DE ARANDANO",
+        "title": "PASTEL DE ARANDANO",
+        "img": "/torta_arandano.png",
+        "price": 8.00,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "CANDY CAKE",
+        "title": "CANDY CAKE",
+        "img": "/torta_candycake.png",
+        "price": 62.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "TORTA CARROT CAKE",
+        "title": "TORTA CARROT CAKE",
+        "img": "/torta_carrotcake.png",
+        "price": 70.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "CHEESECAKE SAUCO",
+        "title": "CHEESECAKE SAUCO",
+        "img": "/torta_cheesecakesauco.png",
+        "price": 59.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "TORTA DE CHIRIMOYA",
+        "title": "TORTA DE CHIRIMOYA",
+        "img": "/torta_chirimoya.png",
+        "price": 75.00,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TORTA CHOCO COCO",
+        "title": "TORTA CHOCO COCO",
+        "img": "/torta_chocococo.png",
+        "price": 8.00,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TORTA DE CHOCOLATE",
+        "title": "TORTA DE CHOCOLATE",
+        "img": "/torta_chocolate.png",
+        "price": 59.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "CHOCO TRES LECHES",
+        "title": "CHOCO TRES LECHES",
+        "img": "/torta_chocotresleches.png",
+        "price": 71.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "DULCE DE LECHE",
+        "title": "DULCE DE LECHE",
+        "img": "/torta_dulceleche.png",
+        "price": 70.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TORTA HELADA",
+        "title": "TORTA HELADA",
+        "img": "/torta_helada.png",
+        "price": 38.40,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TORTA DE LÚCUMA",
+        "title": "TORTA DE LÚCUMA",
+        "img": "/torta_lucuma.png",
+        "price": 54.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "MARACU TRES LECHES",
+        "title": "MARACU TRES LECHES",
+        "img": "/torta_maracutreslechess.png",
+        "price": 60.70,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TORTA DE MARACUYÁ",
+        "title": "TORTA DE MARACUYÁ",
+        "img": "/torta_maracuya.png",
+        "price": 55.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "MOUSSE CHOCOLATE",
+        "title": "MOUSSE CHOCOLATE",
+        "img": "/torta_moussechocolate.png",
+        "price": 64.90,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "TORTA DE NUECES",
+        "title": "TORTA DE NUECES",
+        "img": "/torta_nueces.png",
+        "price": 76.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "PINK VELVET",
+        "title": "PINK VELVET",
+        "img": "/torta_pinkvelvet.png",
+        "price": 59.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TORTA RED VELVET",
+        "title": "TORTA RED VELVET",
+        "img": "/torta_redvelvet.png",
+        "price": 59.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TORTA SELVA NEGRA",
+        "title": "TORTA SELVA NEGRA",
+        "img": "/torta_selva.png",
+        "price": 69.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "SELVA TRES LECHES",
+        "title": "SELVA TRES LECHES",
+        "img": "/torta_selvatresleches.png",
+        "price": 56.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TIRAMISÚ",
+        "title": "TIRAMISÚ",
+        "img": "/torta_tiramisu.png",
+        "price": 64.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TORTA TRES LECHES",
+        "title": "TORTA TRES LECHES",
+        "img": "/torta_tresleches.png",
+        "price": 44.00,
+        "categoria": "DULCES"
+    },
+    {
+        "slug": "TRES LECHES COCO",
+        "title": "TRES LECHES COCO",
+        "img": "/torta_treslechescoco.png",
+        "price": 62.80,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TRES LECHES COLADA",
+        "title": "TRES LECHES COLADA",
+        "img": "/torta_treslechescolda.png",
+        "price": 51.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TRES LECHES SAUCO",
+        "title": "TRES LECHES SAUCO",
+        "img": "/torta_treslechessauco.png",
+        "price": 51.90,
+        "categoria": "ESPECIALES"
+    },
+    {
+        "slug": "TORTA TRUFADA",
+        "title": "TORTA TRUFADA",
+        "img": "/torta_trufada.png",
+        "price": 66.90,
+        "categoria": "ESPECIALES"
+    }
+]

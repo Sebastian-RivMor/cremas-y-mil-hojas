@@ -1,0 +1,24 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+---
+
+<Layout>
+    <Navbar />
+
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-2xl font-bold mb-4">Resumen de Compra</h1>
+
+        <ul id="lista-productos" class="mt-4 space-y-2"></ul>
+
+        <p id="total-pago" class="font-bold mt-4"></p>
+
+        <button onclick="finalizarCompra()" class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4">
+            Finalizar compra
+        </button>
+    </div>
+
+    <!-- Importar el script externo -->
+    <script src="/js/pago.js" defer></script>
+</Layout>
