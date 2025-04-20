@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import { handleLogin } from '../scripts/auth.js';
 
-import { SignIn, SignOut } from 'auth-astro/components';
 import Banner from "/public/banner.png";
 
 import "../styles/global.css";
@@ -49,14 +48,14 @@ import "../styles/global.css";
 
         <hr class="my-6 border-gray-300 w-full">
 
-        <div class="bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition dark:bg-white dark:text-slate-900 dark:hover:bg-gray-200 flex items-center gap-2">
+        <!-- <div class="bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition dark:bg-white dark:text-slate-900 dark:hover:bg-gray-200 flex items-center gap-2">
           <SignIn provider="google">
             <div class="flex items-center gap-2">
               <img class="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="Google logo" />
               <span>Log in with Google</span>
             </div>
           </SignIn>
-        </div>
+        </div> -->
 
         <p class="mt-8">
           Need an account?
