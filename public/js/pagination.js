@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         data-img="${product.img}"
                         data-price="${product.price}"
                     >
-                        AÑADIR
+                        AGREGAR
                     </button>
                 </article>
             `;

@@ -14,66 +14,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function saveCart(cart) {
         localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartUI();
+        updateCartUI(); // Actualizar la interfaz del carrito
     }
 
-    function updateCartUI() {
+    // Hacer que updateCartUI esté disponible globalmente
+    window.updateCartUI = function updateCartUI() {
         const cart = getCart();
-        cartCount.textContent = cart.length;
+        cartCount.textContent = cart.length; // Actualizar el contador del carrito
         cartContainer.innerHTML = ""; // Limpiar el carrito antes de actualizar
         const cartTotal = document.getElementById("cart-total"); // Elemento del total
-    
+
         let total = 0; // Variable para calcular el total
-    
+
         if (cart.length === 0) {
             cartContainer.innerHTML = "<p class='text-gray-500 text-center'>Tu carrito está vacío.</p>";
             cartTotal.textContent = "Total: S/ 0.00"; // Reiniciar total
         } else {
             cart.forEach((product, index) => {
+                const price = parseFloat(product.price) || 0; // Asegurarse de que el precio sea un número
                 const item = document.createElement('div');
                 item.classList.add('flex', 'items-center', 'justify-between', 'border-b', 'py-2', 'gap-2');
-    
+
                 item.innerHTML = `
                     <img src="${product.img}" class="checkout-img border">
                     <div class="flex-1 text-left">
                         <p class="font-semibold text-sm">${product.title}</p>
-                        <p class="text-gray-600 text-xs">S/ ${product.price}</p>
+                        <p class="text-gray-600 text-xs">S/ ${price.toFixed(2)}</p>
                     </div>
-                    <button class="cursor-pointer remove-item text-red-600 text-xs px-2">✕</button>
+                    <button class="cursor-pointer remove-item text-red-600 text-xs px-2" data-index="${index}">✕</button>
                 `;
-    
+
                 cartContainer.appendChild(item);
-                total += parseFloat(product.price)||0; // Sumar precios al total
+                total += price; // Sumar precios al total
             });
-    
+
             cartTotal.textContent = `Total: S/ ${total.toFixed(2)}`; // Mostrar total con 2 decimales
-    
-            // Agregar evento a los botones de eliminar
-            document.querySelectorAll('.remove-item').forEach((button, index) => {
-                button.addEventListener('click', () => {
-                    removeItem(index);
-                });
-            });
+        }
+    };
+
+    // Delegación de eventos para manejar la eliminación de productos
+    cartContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('remove-item')) {
+            const index = parseInt(event.target.dataset.index, 10); // Obtener el índice del producto
+            if (!isNaN(index)) {
+                removeItem(index); // Llamar a la función para eliminar el producto
+            }
+        }
+    });
+
+    // Función para eliminar un ítem del carrito
+    function removeItem(index) {
+        let cart = getCart();
+        if (index >= 0 && index < cart.length) {
+            cart.splice(index, 1); // Eliminar el producto del carrito
+            saveCart(cart); // Guardar el carrito actualizado
         }
     }
-    
-    
-    
-    // Función para eliminar un ítem del carrito
-    function removeItem(index) {
-        let cart = getCart();
-        cart.splice(index, 1);
-        saveCart(cart);
-    }
-    
-    
-    // Función para eliminar un ítem del carrito
-    function removeItem(index) {
-        let cart = getCart();
-        cart.splice(index, 1);
-        saveCart(cart);
-    }
-    
 
     function addToCart(event) {
         const button = event.target;
@@ -81,21 +77,19 @@ document.addEventListener("DOMContentLoaded", function () {
             slug: button.dataset.slug,
             title: button.dataset.title,
             img: button.dataset.img,
-            price: button.dataset.price
+            price: parseFloat(button.dataset.price) || 0 // Convertir el precio a número
         };
-    
+
         // 🚨 Validar que los datos no sean {slug}, {title}, etc.
         if (product.slug.includes("{") || product.title.includes("{")) {
             console.error("❌ Error: Los datos del producto no se están interpolando correctamente.");
             return;
         }
-    
+
         let cart = getCart();
         cart.push(product);
         saveCart(cart);
     }
-    
-        
 
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', addToCart);
@@ -105,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         checkoutModal.classList.remove('hidden');
         checkoutOverlay.classList.remove('hidden'); // Muestra el overlay
     });
-    
+
     continueShopping.addEventListener('click', () => {
         checkoutModal.classList.add('hidden');
         checkoutOverlay.classList.add('hidden'); // Oculta el overlay
@@ -121,12 +115,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         window.location.href = "/pago";
     });
-    
+
     checkoutOverlay.addEventListener("click", () => {
         checkoutModal.classList.add("hidden");
         checkoutOverlay.classList.add("hidden");
     });
-    
 
     // Inicializar la UI del carrito
     updateCartUI();
