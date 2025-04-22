@@ -5,259 +5,296 @@
         "img": "/alfajor.png",
         "price": 4.00,
         "categoria": "DULCES",
-        "costo": "BAJO"
+        "costo": "BAJO",
+        "descripcion": "Delicioso alfajor relleno de manjar, perfecto para endulzar tu día."
     },
     {
         "slug": "CARROT CAKE",
         "title": "CARROT CAKE",
         "img": "/carrot_cake.png",
         "price": 11.00,
-        "categoria": "DULCES"
+        "categoria": "DULCES",
+        "descripcion": "Bizcocho suave de zanahoria con un toque especiado y cobertura dulce."
     },
     {
         "slug": "CROISSANT",
         "title": "CROISSANT",
         "img": "/pan_croissant.png",
         "price": 2.80,
-        "categoria": "BOLLERÍA"
+        "categoria": "BOLLERÍA",
+        "descripcion": "Clásico croissant hojaldrado, ligero y con sabor mantequilloso"
     },
     {
         "slug": "EMPANADA DE LOMO",
         "title": "EMPANADA DE LOMO",
         "img": "/empanada_lomo.png",
         "price": 7.90,
-        "categoria": "ESPECIALES"
+        "categoria": "ESPECIALES",
+        "descripcion": "Empanada rellena con jugoso lomo saltado, una fusión de sabor criollo."
     },
     {
         "slug": "EMPANADAS",
         "title": "EMPANADAS",
         "img": "/empanada.png",
         "price": 7.00,
-        "categoria": "ESPECIALES"
+        "categoria": "ESPECIALES",
+        "descripcion": "Empanadas tradicionales, ideales para un antojo salado y sabroso."
     },
     {
         "slug": "CHIFÓN DE NARANJA",
         "title": "CHIFÓN DE NARANJA",
         "img": "/keke_chifonnaranja.png",
         "price": 22.10,
-        "categoria": "DULCES"
+        "categoria": "DULCES",
+        "descripcion": "Esponjoso chifón con sabor natural a naranja, suave y aromático."
     },
     {
         "slug": "CHOCO KEKE",
         "title": "CHOCO KEKE",
         "img": "/keke_choco.png",
         "price": 13.90,
-        "categoria": "DULCES"
+        "categoria": "DULCES",
+        "descripcion": "Keke de chocolate húmedo y delicioso, ideal para los amantes del cacao."
     },
     {
         "slug": "KEKE GLASEADO",
         "title": "KEKE GLASEADO",
         "img": "/keke_glaseado.png",
         "price": 14.90,
-        "categoria": "DULCES"
+        "categoria": "DULCES",
+        "descripcion": "Keke suave con cobertura glaseada que le da un toque dulce y crujiente."
     },
     {
         "slug": "KEKE MARMOLEADO",
         "title": "KEKE MARMOLEADO",
         "img": "/keke_marmoleado.png",
         "price": 12.00,
-        "categoria": "DULCES"
+        "categoria": "DULCES",
+        "descripcion": "Delicioso bizcocho de vainilla y chocolate en un suave marmoleado."
     },
     {
         "slug": "KEKE DE NARANJA",
         "title": "KEKE DE NARANJA",
         "img": "/keke_naranja.png",
         "price": 12.20,
-        "categoria": "DULCES"
+        "categoria": "DULCES",
+        "descripcion": "Keke con un fresco sabor a naranja, perfecto para acompañar el café."
     },
     {
         "slug": "KEKE DE VAINILLA",
         "title": "KEKE DE VAINILLA",
         "img": "/keke_vainilla.png",
         "price": 12.60,
-        "categoria": "DULCES"
+        "categoria": "DULCES",
+        "descripcion": "Keke clásico de vainilla, suave y esponjoso, ideal para cualquier momento."
     },
     {
         "slug": "KEKE VAINILLA MANJAR",
         "title": "KEKE VAINILLA MANJAR",
         "img": "/keke_vainillamanjar.png",
         "price": 13.90,
-        "categoria": "DULCES"
+        "categoria": "DULCES",
+        "descripcion": "Keke de vainilla con relleno de manjar, una combinación irresistible."
     },
     {
         "slug": "MIL HOJAS",
         "title": "MIL HOJAS",
         "img": "/milhojas.png",
         "price": 6.00,
-        "categoria": "BOLLERÍA"
+        "categoria": "BOLLERÍA",
+        "descripcion": "Crujiente y cremoso postre de capas de hojaldre con relleno dulce."
     },
     {
         "slug": "PAN ÁRABE BLANCO",
         "title": "PAN ÁRABE BLANCO",
         "img": "/pan_arabe.png",
         "price": 2.50,
-        "categoria": "PAN SALUDABLE"
+        "categoria": "PAN SALUDABLE",
+        "descripcion": "Pan árabe suave y ligero, ideal para wraps o acompañar tus comidas."
     },
     {
         "slug": "ÁRABE INTEGRAL",
         "title": "ÁRABE INTEGRAL",
         "img": "/pan_arabeintegral.png",
         "price": 2.50,
-        "categoria": "PAN SALUDABLE"
+        "categoria": "PAN SALUDABLE",
+        "descripcion": "Versión integral del pan árabe, con más fibra y el mismo delicioso sabor."
     },
     {
         "slug": "PAN CARIOCA",
         "title": "PAN CARIOCA",
         "img": "/pan_carioca.png",
         "price": 2.50,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Pan suave con corteza dorada, perfecto para desayunos o meriendas."
     },
     {
         "slug": "PAN BAGUETTE",
         "title": "PAN BAGUETTE",
         "img": "/pan_baguette.png",
         "price": 2.20,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Clásica baguette francesa, crocante por fuera y tierna por dentro."
     },
     {
         "slug": "BATARD MULTIGRANO",
         "title": "BATARD MULTIGRANO",
         "img": "/pan_batard.png",
         "price": 9.90,
-        "categoria": "PAN SALUDABLE"
+        "categoria": "PAN SALUDABLE",
+        "descripcion": "Pan rústico con mezcla de granos, nutritivo y lleno de sabor."
     },
     {
         "slug": "PAN BRIOCHE",
         "title": "PAN BRIOCHE",
         "img": "/pan_brioche.png",
         "price": 2.90,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Pan dulce y esponjoso con un toque de mantequilla, ideal para sandwiches."
     },
     {
         "slug": "PAN CACHITO",
         "title": "PAN CACHITO",
         "img": "/pan_cachito.png",
         "price": 2.80,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Pan artesanal en forma de media luna, suave y con sabor casero."
     },
     {
         "slug": "PAN DE CENTENO",
         "title": "PAN DE CENTENO",
         "img": "/pan_centeno.png",
         "price": 5.90,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Pan denso y sabroso elaborado con harina de centeno, ideal para un desayuno energético."
     },
     {
         "slug": "PAN CHAPLA",
         "title": "PAN CHAPLA",
         "img": "/pan_chapla.png",
         "price": 4.50,
-        "categoria": "PAN SALUDABLE"
+        "categoria": "PAN SALUDABLE",
+        "descripcion": "Pan tradicional andino con sabor auténtico y textura firme."
     },
     {
         "slug": "CHOCOKARAMANDUKA",
         "title": "CHOCOKARAMANDUKA",
         "img": "/pan_chocokaramaduka.png",
         "price": 4.30,
-        "categoria": "BOLLERÍA"
+        "categoria": "BOLLERÍA",
+        "descripcion": "Pan dulce relleno de chocolate y caramelo, una explosión de sabor."
     },
     {
         "slug": "PAN CIABATTA",
         "title": "PAN CIABATTA",
         "img": "/pan_ciabatta.png",
         "price": 2.80,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Pan de corteza crujiente y miga aireada, perfecto para sándwiches gourmet."
     },
     {
         "slug": "PAN COLIZA",
         "title": "PAN COLIZA",
         "img": "/pan_coliza.png",
         "price": 2.20,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Pan suave y esponjoso, ideal para acompañar cualquier comida."
     },
     {
         "slug": "PAN FRANCÉS",
         "title": "PAN FRANCÉS",
         "img": "/pan_frances.png",
         "price": 2.80,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Pan crujiente y dorado, un infaltable en cada mesa."
     },
     {
         "slug": "HOGAZA BLANCA",
         "title": "HOGAZA BLANCA",
         "img": "/pan_hogazablanca.png",
         "price": 6.90,
-        "categoria": "PAN SALUDABLE"
+        "categoria": "PAN SALUDABLE",
+        "descripcion": "Pan rústico de miga blanca, ideal para compartir."
     },
     {
         "slug": "HOGAZA MUESLI",
         "title": "HOGAZA MUESLI",
         "img": "/pan_hogazamuesli.png",
         "price": 9.90,
-        "categoria": "PAN SALUDABLE"
+        "categoria": "PAN SALUDABLE",
+        "descripcion": "Pan nutritivo con frutas secas, avena y semillas."
     },
     {
         "slug": "HOGAZA MULTICEREAL",
         "title": "HOGAZA MULTICEREAL",
         "img": "/pan_hogazamulticereal.png",
         "price": 9.90,
-        "categoria": "PAN SALUDABLE"
+        "categoria": "PAN SALUDABLE",
+        "descripcion": "Pan saludable con mezcla de cereales y textura rústica."
     },
     {
         "slug": "PAN INTEGRAL",
         "title": "PAN INTEGRAL",
         "img": "/pan_integral.png",
         "price": 2.80,
-        "categoria": "PAN SALUDABLE"
+        "categoria": "PAN SALUDABLE",
+        "descripcion": "Pan elaborado con harina integral, alto en fibra y sabor."
     },
     {
         "slug": "KARAMANDUKA",
         "title": "KARAMANDUKA",
         "img": "/pan_karamaduka.png",
         "price": 4.50,
-        "categoria": "BOLLERÍA"
+        "categoria": "BOLLERÍA",
+        "descripcion": "Panecillo dulce con toques de manjar y cobertura dorada, una delicia tradicional."
     },
     {
         "slug": "MINI CACHITO",
         "title": "MINI CACHITO",
         "img": "/pan_minicachito.png",
         "price": 8.60,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Mini versión del clásico cachito, perfecto para compartir o disfrutar como snack."
     },
     {
         "slug": "MINI CROISSANT",
         "title": "MINI CROISSANT",
         "img": "/pan_minicroissant.png",
         "price": 2.10,
-        "categoria": "BOLLERÍA"
+        "categoria": "BOLLERÍA",
+        "descripcion": "Mini croissant hojaldrado con sabor mantequilloso, ideal para acompañar un café."
     },
     {
         "slug": "PAN MULTICEREAL",
         "title": "PAN MULTICEREAL",
         "img": "/pan_multicereal.png",
         "price": 5.90,
-        "categoria": "PAN SALUDABLE"
+        "categoria": "PAN SALUDABLE",
+        "descripcion": "Pan nutritivo elaborado con una mezcla de cereales ricos en fibra y sabor."
     },
     {
         "slug": "PETIT PAN",
         "title": "PETIT PAN",
         "img": "/pan_petit.png",
         "price": 7.90,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Delicados panecillos estilo francés, suaves y perfectos para acompañar cualquier comida."
     },
     {
         "slug": "PAN PIZZA",
         "title": "PAN PIZZA",
         "img": "/pan_pizza.png",
         "price": 4.40,
-        "categoria": "PAN ARTESANAL"
+        "categoria": "PAN ARTESANAL",
+        "descripcion": "Pan base tipo pizza, crujiente por fuera y suave por dentro, ideal para toppings."
     },
     {
         "slug": "PAN YEMA",
         "title": "PAN YEMA",
         "img": "/pan_yema.png",
         "price": 2.80,
-        "categoria": "PAN SALUDABLE"
+        "categoria": "PAN SALUDABLE",
+        "descripcion": "Pan suave y dorado elaborado con yema de huevo, ideal para desayunos nutritivos."
     },
     {
         "slug": "PIE DE FRUTAS",

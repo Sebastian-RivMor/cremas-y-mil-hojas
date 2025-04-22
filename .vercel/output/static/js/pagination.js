@@ -5,7 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
     let filteredProducts = [];
     const itemsPerPage = 9;
 
-    // Función para renderizar productos
+    // 🟡 Crear el modal dinámicamente al cargar la página
+    const modalHTML = `
+        <div id="productModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center">
+            <div class="bg-white rounded-xl shadow-lg max-w-md w-full p-6 relative">
+                <button id="closeModal" class="absolute top-3 right-4 text-gray-400 hover:text-gray-600 text-xl">&times;</button>
+                <img id="modalImg" class="w-full h-48 object-cover rounded" src="" alt="Producto" />
+                <h2 id="modalTitle" class="text-2xl font-semibold mt-4"></h2>
+                <p id="modalDescripcion" class="text-gray-600 text-sm mt-2"></p>
+                <button id="modalAddToCart" class="bg-yellow-500 hover:bg-yellow-600 text-white mt-4 px-4 py-2 rounded w-full">
+                    Agregar al Carrito
+                </button>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+    let modalProduct = null; // Para guardar el producto actual en el modal
+
     const renderProducts = (products, page = 1) => {
         productGrid.innerHTML = '';
         const start = (page - 1) * itemsPerPage;
@@ -15,34 +32,30 @@ document.addEventListener('DOMContentLoaded', () => {
         paginatedProducts.forEach(product => {
             const productCard = `
                 <article class="group bg-gradient-to-bl from-blue-50/70 to-white border border-stone-200 p-8 rounded-xl shadow-sm text-center hover:shadow-lg">
-
-                 <!-- Título -->
                     <p class="text-lg tracking-wide text-gray-700 font-semibold">${product.title}</p>
-
-                <!-- Descripción -->
                     <p class="mt-1 text-xs tracking-wider text-gray-400 font-medium">${product.categoria}</p>
-
-                 <!-- Imagen -->
-                    <div class="py-6 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-105">
-                        <img class="h-32 w-96 object-cover" src="${product.img}" alt="${product.title}" />
-                    </div>
-                    
-                <!-- Precio -->
-                    <p class="text-gray-700 text-xl tracking-wide">S/ ${product.price.toFixed(2)}</p>
-
-                <!-- Línea con degradado --> 
-                    <div class="py-8">
-                        <div class="top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent from-10% via-gray-300 to-transparent to-90%"></div>
-                    </div>
-
-                <!-- Botón de compra -->
-                    <button 
-                        class="px-7 py-2 border border-yellow-600 text-yellow-600 rounded-full transition-all duration-300 ease-in-out
-    hover:bg-transparent hover:border-yellow-700/80 hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700/80 hover:bg-clip-text hover:text-transparent hover:scale-103 cursor-pointer add-to-cart"
+                    <div 
+                        class="py-6 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-105 cursor-pointer open-modal"
                         data-slug="${product.slug}"
                         data-title="${product.title}"
                         data-img="${product.img}"
                         data-price="${product.price}"
+                        data-descripcion="${product.descripcion}"
+                    >
+                        <img class="h-32 w-96 object-cover" src="${product.img}" alt="${product.title}" />
+                    </div>
+                    <p class="text-gray-700 text-xl tracking-wide">S/ ${product.price.toFixed(2)}</p>
+                    <div class="py-8">
+                        <div class="top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent from-10% via-gray-300 to-transparent to-90%"></div>
+                    </div>
+                    <button 
+                        class="px-7 py-2 border border-yellow-600 text-yellow-600 rounded-full transition-all duration-300 ease-in-out
+                        hover:bg-transparent hover:border-yellow-700/80 hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700/80 hover:bg-clip-text hover:text-transparent hover:scale-103 cursor-pointer add-to-cart"
+                        data-slug="${product.slug}"
+                        data-title="${product.title}"
+                        data-img="${product.img}"
+                        data-price="${product.price}"
+                        data-descripcion="${product.descripcion}"
                     >
                         AGREGAR
                     </button>
@@ -54,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPagination(products.length, page);
     };
 
-    // Función para renderizar paginación
     const renderPagination = (totalItems, currentPage) => {
         paginationContainer.innerHTML = '';
         const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -68,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Escuchar el evento de filtrado
     productGrid.addEventListener('filterProducts', (event) => {
         const { categories } = event.detail;
         filteredProducts = categories.length
@@ -78,41 +89,69 @@ document.addEventListener('DOMContentLoaded', () => {
         renderProducts(filteredProducts, 1);
     });
 
-    // Delegar evento para los botones "COMPRAR"
+    // Abrir modal de producto
     productGrid.addEventListener('click', (event) => {
-        const button = event.target.closest('.add-to-cart'); // Asegurarse de que el clic sea en un botón válido
-        if (button) {
-            const product = {
-                slug: button.dataset.slug,
-                title: button.dataset.title,
-                img: button.dataset.img,
-                price: parseFloat(button.dataset.price)
+        const addButton = event.target.closest('.add-to-cart');
+        const modalTarget = event.target.closest('.open-modal');
+
+        if (addButton) {
+            const producto = {
+                slug: addButton.dataset.slug,
+                title: addButton.dataset.title,
+                img: addButton.dataset.img,
+                price: parseFloat(addButton.dataset.price),
+                descripcion: addButton.dataset.descripcion || 'Sin descripción.'
             };
-
-            // Validar que los datos no sean placeholders
-            if (!product.slug || !product.title || !product.img || isNaN(product.price)) {
-                console.error("❌ Error: Los datos del producto no se están interpolando correctamente.");
-                return;
-            }
-
-            console.log("Producto para agregar al carrito:", product); // Depuración
-
-            // Guardar el producto en el carrito (localStorage)
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push(product);
+            cart.push(producto);
             localStorage.setItem('cart', JSON.stringify(cart));
 
-            // Llamar a la función centralizada para actualizar la interfaz del carrito
-            if (typeof updateCartUI === 'function') {
-                updateCartUI(); // Asegúrate de que esta función esté disponible globalmente
-            } else {
-                console.error("❌ Error: La función updateCartUI no está disponible.");
-            }
+            if (typeof updateCartUI === 'function') updateCartUI();
+        }
+
+        if (modalTarget) {
+            const producto = {
+                slug: modalTarget.dataset.slug,
+                title: modalTarget.dataset.title,
+                img: modalTarget.dataset.img,
+                price: parseFloat(modalTarget.dataset.price),
+                descripcion: modalTarget.dataset.descripcion || 'Sin descripción.'
+            };
+            modalProduct = producto;
+
+            document.getElementById('modalImg').src = producto.img;
+            document.getElementById('modalTitle').textContent = producto.title;
+            document.getElementById('modalDescripcion').textContent = producto.descripcion;
+            document.getElementById('productModal').classList.remove('hidden');
         }
     });
 
-    // Inicializar productos (simulación de datos)
-    fetch('/api/products.json') // Cambia esto por la ruta real de tu API o datos
+
+    // Cerrar modal
+    document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('productModal').classList.add('hidden');
+        modalProduct = null;
+    });
+
+    // Agregar producto al carrito desde el modal
+    document.getElementById('modalAddToCart').addEventListener('click', () => {
+        if (!modalProduct) return;
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(modalProduct);
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        if (typeof updateCartUI === 'function') {
+            updateCartUI();
+        }
+
+        // Cerrar modal tras agregar
+        document.getElementById('productModal').classList.add('hidden');
+        modalProduct = null;
+    });
+
+    // Inicializar productos
+    fetch('/api/products.json')
         .then(response => response.json())
         .then(data => {
             allProducts = data;
