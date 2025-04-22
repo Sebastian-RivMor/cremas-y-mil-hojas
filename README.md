@@ -1,48 +1,52 @@
 # 🥐 eCommerce Crema y Milhojas 🫓✨
-Este es un e-commerce inclusivo desarrollado con **HTML**,**CSS** y **JavaScript**, diseñado para mejorar la experiencia de compra en línea con características de accesibilidad.
+Crema y Milhojas es una tienda en línea accesible e inclusiva, desarrollada con **Astro**, **Tailwind CSS**, **JavaScript**, **HTML5** y **Node.js**. Este proyecto está enfocado en mejorar la experiencia del usuario, haciendo especial énfasis en la accesibilidad y el diseño responsivo.
 
-## 🚀 *Características*
+## 🚀 *Funcionalidades principales*
 
-✅ **Diseño Responsivo** - Adaptable a distintos dispositivos.
+✅ **Diseño Responsivo:** Adaptado a dispositivos móviles, tablets y pantallas de escritorio.
 
-✅ **Carrito de Compras** - Permite agregar y eliminar productos en tiempo real.
+✅ **Carrito de Compras Dinámico** Permite agregar y eliminar productos en tiempo real.
 
-✅ **Modo Oscuro** - Mejora la visibilidad y reduce la fatiga visual.
+✅ **Modo Oscuro:** Mejora la legibilidad y reduce la fatiga visual.
 
-✅ **Ajuste de Tamaño de Texto** - Permite aumentar el tamaño de la letra en la descripción del producto.
+✅ **Ajuste de Tamaño de Texto:** Ajuste accesible para facilitar la lectura de descripciones.
 
-✅ **Interfaz Dinámica** - Interacciones con JavaScript para una mejor experiencia.
+✅ **Interfaz Dinámica:** Interacciones con JavaScript para una mejor experiencia.
 
-✅ **Módulos Reutilizables** - Estructura organizada con componentes de header y footer.
+✅ **Componentes Reutilizables:** Uso de módulos como header y footer para mantener el código organizado.
 
-✅ **Optimización con CSS** - Estilos personalizados para una presentación atractiva.
+✅ **Estilización con Tailwind CSS** Estilos personalizados para una presentación moderna y atractiva.
 
 ## 🍉 Tecnologías utilizadas
 
+🔸 **Astro** – Framework moderno para generar sitios rápidos y ligeros.
+
 🔸 **HTML5** - Estructura del sitio web.
 
-🔸 **CSS3** - Estilización y diseño responsivo.
+🔸 **Tailwind CSS** – Estilos utilitarios para un diseño elegante y responsivo.
 
 🔸 **JavaScript (ES6)** - Interactividad y funcionalidades dinámicas.
+
+🔸 **Node.js** – Entorno de ejecución para facilitar el desarrollo.
 
 ## ♿ Accesibilidad
 
 Este proyecto busca ser más inclusivo al ofrecer:
 
-+ **Modo oscuro** para mejorar la legibilidad y reducir el cansancio visual.
++ 🌙 **Modo oscuro** para mejorar la legibilidad y reducir el cansancio visual.
   
-+ **Ajuste de tamaño de texto** en la descripción de los productos para facilitar la lectura.
++ 🔠 **Ajuste de tamaño de texto** en la descripción de los productos para facilitar la lectura.
   
-🔹 *Próximas mejoras: Integración de más herramientas de accesibilidad como navegación por teclado y compatibilidad con lectores de pantalla.*
+🔹 *Próximamente: navegación por teclado y compatibilidad con lectores de pantalla.*
 
-## 📥 Instalación
+## 📦 Instalación
 
 ### Opción 1: Clonar el repositorio
 
 + Clona este repositorio:
 
 ```sh
-git clone https://github.com/Blueisazul/eCommerce-crema-y-milhojas.git
+git clone https://github.com/Sebastian-RivMor/cremas-y-mil-hojas.git
 
 ```
 
@@ -52,7 +56,7 @@ git clone https://github.com/Blueisazul/eCommerce-crema-y-milhojas.git
 
 ### Opción 2: Descargar el ZIP
 
-1. Ve al repositorio en GitHub: **eCommerce Crema y Milhojas**.
+1. Ve al repositorio en GitHub: **Crema y Milhojas**.
    
 2. Haz clic en el botón **Code** (verde) y selecciona **Download ZIP**.
    
@@ -62,6 +66,7 @@ git clone https://github.com/Blueisazul/eCommerce-crema-y-milhojas.git
 
 ## 📷 Vista previa
 
+![chrome-capture-2025-4-21](https://github.com/user-attachments/assets/344be876-7aa6-4b29-ae95-b3bf24f03bbe)
 
 
 
