@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         class="py-6 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-105 cursor-pointer open-modal"
                         data-slug="${product.slug}"
                         data-title="${product.title}"
+                        data-categoria="${product.categoria}"
                         data-img="${product.img}"
                         data-price="${product.price}"
                         data-descripcion="${product.descripcion}"
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         hover:bg-transparent hover:border-yellow-700/80 hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700/80 hover:bg-clip-text hover:text-transparent hover:scale-103 cursor-pointer add-to-cart"
                         data-slug="${product.slug}"
                         data-title="${product.title}"
+                        data-categoria="${product.categoria}"
                         data-img="${product.img}"
                         data-price="${product.price}"
                         data-descripcion="${product.descripcion}"
@@ -98,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const producto = {
                 slug: addButton.dataset.slug,
                 title: addButton.dataset.title,
+                categoria: addButton.dataset.categoria,
                 img: addButton.dataset.img,
                 price: parseFloat(addButton.dataset.price),
                 descripcion: addButton.dataset.descripcion || 'Sin descripción.'

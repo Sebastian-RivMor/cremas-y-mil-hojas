@@ -33,21 +33,47 @@ document.addEventListener("DOMContentLoaded", function () {
             cart.forEach((product, index) => {
                 const price = parseFloat(product.price) || 0; // Asegurarse de que el precio sea un número
                 const item = document.createElement('div');
-                item.classList.add('flex', 'items-center', 'justify-between', 'border-b', 'py-2', 'gap-2');
+                item.classList.add('flex', 'items-center', 'justify-between', 'border-b', 'border-gray-300', 'py-4', 'pt-2', 'gap-4');
 
-                item.innerHTML = `
-                    <img src="${product.img}" class="checkout-img border">
-                    <div class="flex-1 text-left">
-                        <p class="font-semibold text-sm">${product.title}</p>
-                        <p class="text-gray-600 text-xs">S/ ${price.toFixed(2)}</p>
+                item.innerHTML = ` 
+                    <div>
+                        <div class="bg-gradient-to-bl from-blue-50/70 to-slate-50/30 rounded-xl w-16 h-16">
+                            <img src="${product.img}" class="checkout-img">
+                        </div>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <button class="minus-quantity decrease-item bg-gray-200 px-2 rounded text-xl" data-index="${index}">-</button>
-                        <span class="quantity text-sm">${product.quantity || 1}</span>
-                        <button class="plus-quantity decrease-item bg-gray-200 px-2 rounded text-xl" data-index="${index}">+</button>
+                
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-1">
+                            <div>
+                                <p class="font-medium text-sm">${product.title}</p>
+                                <p class="text-gray-400 font-medium text-xs">${product.categoria}</p>
+                            </div>
+                        
+                            <button class="cursor-pointer remove-item text-rose-600 hover:text-white hover:bg-rose-500 rounded-sm text-xs px-1 py-1" data-index="${index}">                
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2" pointer-events="none"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>                        
+                            </button>
+                        </div>    
+                    
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-semibold text-black text-base">S/ ${price.toFixed(2)}</p>
+                            </div>
+                        
+                            <div class="flex items-center gap-2">
+                                <button class="minus-quantity decrease-item cursor-pointer bg-gray-200 hover:bg-gray-300 px-1 py-1 rounded text-xl" data-index="${index}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus-icon lucide-minus" pointer-events="none"><path d="M5 12h14"/></svg>
+                                </button>
+                                
+                                <span class="quantity text-sm">${product.quantity || 1}</span>
+                                
+                                <button class="plus-quantity decrease-item cursor-pointer bg-gray-200 hover:bg-gray-300 px-1 py-1 rounded text-xl" data-index="${index}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus" pointer-events="none"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <button class="cursor-pointer remove-item text-red-600 text-xs px-2" data-index="${index}">🗑</button>
                 `;
+//                     <button class="cursor-pointer remove-item text-red-600 text-xs px-2" data-index="${index}">🗑</button>
 
                 cartContainer.appendChild(item);
                 total += price * (product.quantity || 1); // Sumar precios según la cantidad
@@ -55,6 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             cartTotal.textContent = `Total: S/ ${total.toFixed(2)}`; // Mostrar total con 2 decimales
         }
+
+        const cartTotalButton = document.getElementById("cart-total-button");
+        if (cartTotalButton) {
+            cartTotalButton.textContent = `S/ ${total.toFixed(2)}`;
+        }        
+        
     };
 
     // Delegación de eventos para manejar la eliminación de productos
