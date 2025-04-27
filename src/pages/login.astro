@@ -1,10 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 import Banner from "/public/banner.png";
-
 import "../styles/global.css";
 ---
+
 <Layout>
   <section class="flex flex-col md:flex-row h-screen items-center">
     <div style={`background-image: url('${Banner.src}');`} class="hidden lg:block md:w-1/2 xl:w-2/3 w-full h-full object-cover"></div>
@@ -47,15 +46,6 @@ import "../styles/global.css";
 
         <hr class="my-6 border-gray-300 w-full">
 
-        <!-- <div class="bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition dark:bg-white dark:text-slate-900 dark:hover:bg-gray-200 flex items-center gap-2">
-          <SignIn provider="google">
-            <div class="flex items-center gap-2">
-              <img class="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="Google logo" />
-              <span>Log in with Google</span>
-            </div>
-          </SignIn>
-        </div> -->
-
         <p class="mt-8">
           Need an account?
           <a onclick="window.location.href='/create-account'" class="text-blue-500 hover:text-blue-700 font-semibold">
@@ -67,7 +57,32 @@ import "../styles/global.css";
   </section>
 
   <script type="module">
-    import { handleLogin } from "/src/scripts/auth.js";
-    document.getElementById("loginForm").addEventListener("submit", handleLogin);
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      
+      const response = await fetch('http://localhost/cremas_y_mil_hojas_Backend/public//login.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password })
+      });
+  
+      const result = await response.json();
+      
+      if (result.success) {
+        alert("Acceso admitido. Bienvenido!");
+        window.location.href = "/";  // Redirige a la página de inicio
+      } else {
+        alert("Acceso denegado. " + result.error);
+        const messageElement = document.getElementById("message");
+        messageElement.textContent = result.error;
+        messageElement.style.display = 'block';
+      }
+    });
   </script>
+  
 </Layout>
